@@ -1,6 +1,6 @@
 //
-//  CaculatorButtonItem.swift
-//  Caculator
+//  CalculatorButtonItem.swift
+//  Calculator
 //
 //  Created by 王洪运 on 2019/8/12.
 //  Copyright © 2019 com.why. All rights reserved.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-enum CaculatorButtonItem: Hashable {
+enum CalculatorButtonItem: Hashable {
     
     enum Op: String {
         case plus = "+"
@@ -31,7 +31,7 @@ enum CaculatorButtonItem: Hashable {
     
 }
 
-extension CaculatorButtonItem {
+extension CalculatorButtonItem {
     
     var title: String {
         switch self {

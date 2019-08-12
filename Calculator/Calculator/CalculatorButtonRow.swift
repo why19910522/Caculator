@@ -1,6 +1,6 @@
 //
-//  CaculatorButtonRow.swift
-//  Caculator
+//  CalculatorButtonRow.swift
+//  Calculator
 //
 //  Created by 王洪运 on 2019/8/12.
 //  Copyright © 2019 com.why. All rights reserved.
@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct CaculatorButtonRow: View {
+struct CalculatorButtonRow: View {
     
-    let row: [CaculatorButtonItem]
+    let row: [CalculatorButtonItem]
     
     var body: some View {
         HStack(spacing: 8) {
             ForEach(row, id: \.self) { item in
-                CaculatorButton(title: item.title,
+                CalculatorButton(title: item.title,
                                 size: item.size,
                                 backgroundColor: item.backgroundColor)
                 {
@@ -27,9 +27,9 @@ struct CaculatorButtonRow: View {
 }
 
 #if DEBUG
-struct CaculatorButtonRow_Previews: PreviewProvider {
+struct CalculatorButtonRow_Previews: PreviewProvider {
     static var previews: some View {
-        CaculatorButtonRow(row: [.digit(7), .digit(8), .digit(9), .op(.multiply)])
+        CalculatorButtonRow(row: [.digit(7), .digit(8), .digit(9), .op(.multiply)])
     }
 }
 #endif

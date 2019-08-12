@@ -1,6 +1,6 @@
 //
-//  CaculatorButton.swift
-//  Caculator
+//  CalculatorButton.swift
+//  Calculator
 //
 //  Created by 王洪运 on 2019/8/12.
 //  Copyright © 2019 com.why. All rights reserved.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct CaculatorButton: View {
+struct CalculatorButton: View {
     
     let title: String
     var size: CGSize = CGSize(width: 88, height: 88)
@@ -35,9 +35,9 @@ struct CaculatorButton: View {
 }
 
 #if DEBUG
-struct CaculatorButton_Previews: PreviewProvider {
+struct CalculatorButton_Previews: PreviewProvider {
     static var previews: some View {
-        CaculatorButton(title: "0", size: CGSize(width: 174, height: 88), backgroundColor: Color.operatorBackground, action: {})
+        CalculatorButton(title: "0", size: CGSize(width: 174, height: 88), backgroundColor: Color.operatorBackground, action: {})
     }
 }
 #endif

@@ -1,6 +1,6 @@
 //
 //  CalculatorButtonPad.swift
-//  Caculator
+//  Calculator
 //
 //  Created by 王洪运 on 2019/8/12.
 //  Copyright © 2019 com.why. All rights reserved.
@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CalculatorButtonPad: View {
     
-    let pad: [[CaculatorButtonItem]] = [
+    let pad: [[CalculatorButtonItem]] = [
         [.command(.clear), .command(.flip), .command(.persent), .op(.divide)],
         [.digit(7), .digit(8), .digit(9), .op(.multiply)],
         [.digit(4), .digit(5), .digit(6), .op(.minus)],
@@ -21,7 +21,7 @@ struct CalculatorButtonPad: View {
     var body: some View {
         VStack(spacing: 8) {
             ForEach(pad, id: \.self) { row in
-                CaculatorButtonRow(row: row)
+                CalculatorButtonRow(row: row)
             }
         }
     }
