@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-enum CalculatorButtonItem: Hashable {
+enum CalculatorButtonItem {
     
     enum Op: String {
         case plus = "+"
@@ -21,7 +21,7 @@ enum CalculatorButtonItem: Hashable {
     enum Command: String {
         case clear = "AC"
         case flip = "+/-"
-        case persent = "%"
+        case percent = "%"
     }
     
     case digit(Int)
@@ -56,6 +56,21 @@ extension CalculatorButtonItem {
         case .digit, .dot: return .digitBackground
         case .op: return .operatorBackground
         case .command: return .commandBG
+        }
+    }
+    
+}
+
+extension CalculatorButtonItem: Hashable {}
+
+extension CalculatorButtonItem: CustomStringConvertible {
+    
+    var description: String {
+        switch self {
+        case .digit(let num): return String(num)
+        case .dot: return "."
+        case .op(let op): return op.rawValue
+        case .command(let command): return command.rawValue
         }
     }
     

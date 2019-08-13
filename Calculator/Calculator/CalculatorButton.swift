@@ -37,7 +37,7 @@ struct CalculatorButton: View {
 #if DEBUG
 struct CalculatorButton_Previews: PreviewProvider {
     static var previews: some View {
-        CalculatorButton(title: "0", size: CGSize(width: 174, height: 88), backgroundColor: Color.operatorBackground, action: {})
+        CalculatorButton(title: "0", size: CGSize(width: 174, height: 88), backgroundColor: Color.digitBackground, action: {})
     }
 }
 #endif
